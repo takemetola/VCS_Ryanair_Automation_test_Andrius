@@ -7,7 +7,7 @@ import org.testng.annotations.Listeners;
 @Listeners(TestListener.class)
 public abstract class TestBase {
     @BeforeMethod
-    public abstract void setUp();
+    public abstract void setUp() throws InterruptedException;
 
     public void tearDown() {
         // Common.quitDriver();
