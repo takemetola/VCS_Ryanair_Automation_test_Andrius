@@ -16,8 +16,12 @@ public class UpdateProfileInfoTest extends TestBase {
     public void testUpdateProfile_DateOfBirth_PhoneNumber() throws InterruptedException {
         String email = "jurkusand@gmail.com";
         String password = "Tomukas123";
-        String expectedResult = "jurkusand@gmail.com";
+        String expectedResult = "** / ** / 2000";
         String actualResult;
+
+        String day = "20";
+        String month = "04";
+        String year = "2000";
 
         LoginPage.clickOnLoginButton();
         Thread.sleep(1000);
@@ -27,10 +31,17 @@ public class UpdateProfileInfoTest extends TestBase {
         Thread.sleep(1000);
 
         LoginPage.clickOnProfileEmail();
+        LoginPage.clickOnMyRyanairButton();
+        Thread.sleep(1000);
+        LoginPage.clickOnEditButton();
+        Thread.sleep(1000);
+        LoginPage.addDay(day);
+        LoginPage.addMonth(month);
+        LoginPage.addYear(year);
+        LoginPage.clickOnSave();
+        Thread.sleep(1000);
 
-
-
-        actualResult = "";
+        actualResult = LoginPage.readDateOfBirth();
 
         Assert.assertEquals(actualResult, expectedResult);
     }

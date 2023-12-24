@@ -16,7 +16,7 @@ public class LoginTest extends TestBase {
         LoginPage.clickOnCookies();
     }
 
-@Test
+    @Test
     public void testLogin() throws InterruptedException {
         String email = "jurkusand@gmail.com";
         String password = "Tomukas123";
@@ -24,11 +24,11 @@ public class LoginTest extends TestBase {
         String actualResult;
 
         LoginPage.clickOnLoginButton();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         LoginPage.inputEmail(email);
         LoginPage.inputPassword(password);
         LoginPage.clickToLogin();
-        Thread.sleep(3000);
+        Thread.sleep(1000);
 
         actualResult = LoginPage.readProfileEmail();
 

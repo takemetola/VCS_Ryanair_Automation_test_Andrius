@@ -41,4 +41,36 @@ public class LoginPage {
         Common.waitForElementToBeVisible(1, Locator.Ryanair.LoginPage.waitForElement);
         Common.clickOnElement(Locator.Ryanair.LoginPage.clickOnNoThanks);
     }
+
+    public static void clickOnProfileEmail() {
+        Common.clickOnElement(Locator.Ryanair.LoginPage.clickOnEmail);
+    }
+
+    public static void clickOnMyRyanairButton() {
+        Common.clickOnElement(Locator.Ryanair.LoginPage.clickOnButtonMyRyanair);
+    }
+
+    public static void clickOnEditButton() {
+        Common.clickOnElement(Locator.Ryanair.LoginPage.clickOnButtonEdit);
+    }
+
+    public static void addDay(String day) {
+        Common.addText(Locator.Ryanair.LoginPage.textAddDay, day);
+    }
+
+    public static void addMonth(String month) {
+        Common.addText(Locator.Ryanair.LoginPage.textAddMonth, month);
+    }
+
+    public static void addYear(String year) {
+        Common.addText(Locator.Ryanair.LoginPage.textAddYear, year);
+    }
+
+    public static void clickOnSave() {
+        Common.clickOnElement(Locator.Ryanair.LoginPage.clickOnButtonSave);
+    }
+
+    public static String readDateOfBirth() {
+        return Common.getText(Locator.Ryanair.LoginPage.readSpanDate);
+    }
 }
