@@ -46,17 +46,17 @@ public class Common {
         return true;
     }
 
-    public static void rightClickOnElementByActions(By locator) {
-        Actions actions = new Actions(Driver.getDriver());
-        actions
-                .contextClick(getElement(locator))
-                .perform();
-    }
-
     public static void scrollWindowByActions() {
         Actions actions = new Actions(Driver.getDriver());
         actions
                 .scrollByAmount(0, 300)
+                .perform();
+    }
+
+    public static void scrollWindowByActions2() {
+        Actions actions = new Actions(Driver.getDriver());
+        actions
+                .scrollByAmount(0, -300)
                 .perform();
     }
 }

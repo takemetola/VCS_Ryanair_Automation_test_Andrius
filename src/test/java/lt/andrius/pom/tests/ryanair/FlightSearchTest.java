@@ -10,6 +10,7 @@ public class FlightSearchTest extends TestBase {
     @BeforeMethod
     @Override
     public void setUp() {
+
         FlightSearchPage.openUrl("https://www.ryanair.com/gb/en");
         LoginPage.clickOnCookies();
     }
@@ -17,20 +18,24 @@ public class FlightSearchTest extends TestBase {
     @Test
     public void testFlightSelect() throws InterruptedException {
 
-        String expectedResult = "";
+        String expectedResult = "FR 6637";
         String actualResult;
-
 
         FlightSearchPage.clickOneWay();
         FlightSearchPage.clickOnFromTextBox();
+        Thread.sleep(1000);
         FlightSearchPage.inputDeparture();
+        Thread.sleep(1000);
         FlightSearchPage.inputDestination();
         Thread.sleep(1000);
         FlightSearchPage.inputDestinationAirport();
-
+        Thread.sleep(1000);
         FlightSearchPage.clickOnDepartDateBox();
+        FlightSearchPage.clickOnButtonDone();
+        FlightSearchPage.clickOnSearchBox();
+        Thread.sleep(1000);
 
-        actualResult = "";
+        actualResult = FlightSearchPage.readFlightNumber();
 
         Assert.assertEquals(actualResult, expectedResult);
     }

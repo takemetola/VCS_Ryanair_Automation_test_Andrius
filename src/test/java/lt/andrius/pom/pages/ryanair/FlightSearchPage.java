@@ -25,12 +25,25 @@ public class FlightSearchPage {
         Common.clickOnElement(Locator.Ryanair.FlightSearchPage.clickOnElementGermany);
     }
 
+    public static void inputDestinationAirport() {
+        Common.clickOnElement(Locator.Ryanair.FlightSearchPage.clickOnElementBerlinBrandenburg);
+    }
+
     public static void clickOnDepartDateBox() {
         Common.scrollWindowByActions();
         Common.clickOnElement(Locator.Ryanair.FlightSearchPage.clickOnDeparturesDateBox);
     }
 
-    public static void inputDestinationAirport() {
-        Common.clickOnElement(Locator.Ryanair.FlightSearchPage.clickOnElementBerlinBrandenburg);
+    public static void clickOnButtonDone() {
+        Common.clickOnElement(Locator.Ryanair.FlightSearchPage.clickOnDone);
+    }
+
+    public static void clickOnSearchBox() {
+        Common.scrollWindowByActions2();
+        Common.clickOnElement(Locator.Ryanair.FlightSearchPage.clickOnBox);
+    }
+
+    public static String readFlightNumber() {
+        return Common.getText(Locator.Ryanair.FlightSearchPage.getTextFlighNumber);
     }
 }

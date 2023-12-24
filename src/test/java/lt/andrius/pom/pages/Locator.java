@@ -41,15 +41,17 @@ public class Locator {
                             "and @data-ref='input-button__display-value']");
             public static By clickOnElementVNO = By.xpath("//span[@data-ref='airport-item__name' " +
                     "and @data-id='VNO']");
-            public static By textAddDestination =
-                    By.xpath("//input[@id='input-button__destination' " +
-                            "and @data-ref='input-button__display-value']");
-            public static By clickOnDeparturesDateBox =
-                    By.xpath("//div[@data-id='2024-01-31' and @data-value='31' and @data-type=‘day']");
             public static By clickOnElementGermany =
                     By.xpath("//span[@data-ref='country__name' and normalize-space(.)='Germany']");
             public static By clickOnElementBerlinBrandenburg =
                     By.xpath("//span[@data-ref='airport-item__name' and @data-id='BER']");
+            public static By clickOnDeparturesDateBox =
+                    By.xpath("//div[@data-id='2024-01-31']");
+            public static By clickOnDone =
+                    By.xpath("//button[@class='passengers__confirm-button ry-button--anchor-blue ry-button--anchor']");
+            public static By clickOnBox = By.xpath("//button[@aria-label='Search']");
+            public static By getTextFlighNumber =
+                    By.xpath("//div[@class='card-flight-num__content' and @data-ref='FR 6637']");
         }
     }
 }
