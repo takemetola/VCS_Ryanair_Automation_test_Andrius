@@ -1,4 +1,5 @@
 import lt.andrius.pom.pages.ryanair.LoginPage;
+import lt.andrius.pom.pages.ryanair.UpdateProfileInfoPage;
 import lt.andrius.pom.tests.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -8,7 +9,7 @@ public class UpdateProfileInfoTest extends TestBase {
     @BeforeMethod
     @Override
     public void setUp() throws InterruptedException {
-        LoginPage.openUrl("https://www.ryanair.com/gb/en");
+        UpdateProfileInfoPage.openUrl("https://www.ryanair.com/gb/en");
         LoginPage.clickOnCookies();
         String email = "jurkusand@gmail.com";
         String password = "Tomukas123";
@@ -29,18 +30,18 @@ public class UpdateProfileInfoTest extends TestBase {
         String expectedResult = "** / ** / 2000";
         String actualResult;
 
-        LoginPage.clickOnProfileEmail();
-        LoginPage.clickOnMyRyanairButton();
+        UpdateProfileInfoPage.clickOnProfileEmail();
+        UpdateProfileInfoPage.clickOnMyRyanairButton();
         Thread.sleep(1000);
-        LoginPage.clickOnEditButton();
+        UpdateProfileInfoPage.clickOnEditButton();
         Thread.sleep(1000);
-        LoginPage.addDay(day);
-        LoginPage.addMonth(month);
-        LoginPage.addYear(year);
-        LoginPage.clickOnSave();
+        UpdateProfileInfoPage.addDay(day);
+        UpdateProfileInfoPage.addMonth(month);
+        UpdateProfileInfoPage.addYear(year);
+        UpdateProfileInfoPage.clickOnSave();
         Thread.sleep(1000);
 
-        actualResult = LoginPage.readDateOfBirth();
+        actualResult = UpdateProfileInfoPage.readDateOfBirth();
 
         Assert.assertEquals(actualResult, expectedResult);
     }

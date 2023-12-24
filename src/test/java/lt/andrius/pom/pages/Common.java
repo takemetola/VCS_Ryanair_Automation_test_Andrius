@@ -4,6 +4,7 @@ import lt.andrius.pom.utils.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -43,5 +44,19 @@ public class Common {
             return false;
         }
         return true;
+    }
+
+    public static void rightClickOnElementByActions(By locator) {
+        Actions actions = new Actions(Driver.getDriver());
+        actions
+                .contextClick(getElement(locator))
+                .perform();
+    }
+
+    public static void scrollWindowByActions() {
+        Actions actions = new Actions(Driver.getDriver());
+        actions
+                .scrollByAmount(0, 300)
+                .perform();
     }
 }
