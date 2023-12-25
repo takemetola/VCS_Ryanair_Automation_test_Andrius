@@ -87,5 +87,13 @@ public class Locator {
             public static By getTitle =
                     By.xpath("(//h1[@class='is-visually-hidden'])[2]");
         }
+
+        public class ContactUsPage {
+            public static By waitForElement = By.xpath("//button[@data-ref='cookie.no-thanks']");
+            public static By clickOnNoThanks = By.xpath("//button[@data-ref='cookie.no-thanks']");
+            public static By clickOnButtonContactUs =
+                    By.xpath("//a[contains(@class,'legal-footer__links-item') " +
+                            "and contains(text(), 'Contact us')]");
+        }
     }
 }
