@@ -5,55 +5,41 @@ import lt.andrius.pom.pages.Locator;
 
 public class ChatBotPage {
     public static void openUrl(String url) {
-        Common.setUpChrome();
+        Common.setUpChrome(2);
         Common.openUrl(url);
     }
 
-    public static void clickOnCookies() {
-        Common.waitForElementToBeVisible(1, Locator.Ryanair.ContactUsPage.waitForElement);
-        Common.clickOnElement(Locator.Ryanair.ContactUsPage.clickOnNoThanks);
-    }
-
-    public static void clickOnContactUsButton() {
-        Common.scrollWindowByActionsMinusPlus3000Y();
-        Common.waitForElementToBeVisible(3,Locator.Ryanair.ContactUsPage.waitForElementtoBeClickable);
-        Common.clickOnElement(Locator.Ryanair.ContactUsPage.clickOnButtonContactUs);
-    }
-
     public static void clickOnLetsChatMenu() {
-       // Common.waitForElementToBeVisible(3,Locator.Ryanair.ContactUsPage.waitForElementLetsChat);
-        Common.clickOnElement(Locator.Ryanair.ContactUsPage.clickOnTagName);
+        Common.clickOnElement(Locator.Ryanair.ChatBotPage.clickOnTagName);
     }
 
     public static void clickOnChatNowButton() {
-        Common.waitForElementToBeVisible(1, Locator.Ryanair.ContactUsPage.waitForElementChatNow);
-        Common.clickOnElement(Locator.Ryanair.ContactUsPage.clickOnLinkChatNow);
+        Common.waitForElementToBeVisible(1, Locator.Ryanair.ChatBotPage.waitForElementChatNow);
+        Common.clickOnElement(Locator.Ryanair.ChatBotPage.clickOnLinkChatNow);
     }
 
     public static void clickOnCookiesAgree() {
-        Common.waitForElementToBeVisible(1, Locator.Ryanair.ContactUsPage.waitforCookies);
-        Common.clickOnElement(Locator.Ryanair.ContactUsPage.clickOnButtonAgree);
+        Common.waitForElementToBeVisible(1, Locator.Ryanair.ChatBotPage.waitforCookies);
+        Common.clickOnElement(Locator.Ryanair.ChatBotPage.clickOnButtonAgree);
     }
 
     public static void addTextName(String name) {
-        Common.waitForElementToBeVisible(3, Locator.Ryanair.ContactUsPage.waitForChatBox);
-        Common.switchToFrame(Locator.Ryanair.ContactUsPage.switchToIFrame);
-        Common.addText(Locator.Ryanair.ContactUsPage.addTextToNameBox, name);
+        Common.waitForElementToBeVisible(3, Locator.Ryanair.ChatBotPage.waitForChatBox);
+        Common.switchToFrame(Locator.Ryanair.ChatBotPage.switchToIFrame);
+        Common.addText(Locator.Ryanair.ChatBotPage.addTextToNameBox, name);
 
     }
 
     public static void addTextEmail(String email) {
-        //Common.waitForElementToBeVisible(3, Locator.Ryanair.ContactUsPage.waitForChatBox);
-        //Common.switchToFrame(Locator.Ryanair.ContactUsPage.switchToIFrame);
-        Common.addText(Locator.Ryanair.ContactUsPage.addTextToEmailBox, email);
+        Common.addText(Locator.Ryanair.ChatBotPage.addTextToEmailBox, email);
     }
 
     public static String readChatBox() {
-        Common.waitForElementToBeVisible(2, Locator.Ryanair.ContactUsPage.waitForChatBoxElement);
-        return Common.getText(Locator.Ryanair.ContactUsPage.getChatBoxText);
+        Common.waitForElementToBeVisible(2, Locator.Ryanair.ChatBotPage.waitForChatBoxElement);
+        return Common.getText(Locator.Ryanair.ChatBotPage.getChatBoxText);
     }
 
     public static void clickOnStartChatButton() {
-        Common.clickOnElement(Locator.Ryanair.ContactUsPage.clickOnButtonStartChat);
+        Common.clickOnElement(Locator.Ryanair.ChatBotPage.clickOnButtonStartChat);
     }
 }

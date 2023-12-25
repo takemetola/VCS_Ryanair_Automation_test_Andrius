@@ -1,5 +1,4 @@
 import lt.andrius.pom.pages.ryanair.HotelBookingPage;
-import lt.andrius.pom.pages.ryanair.LoginPage;
 import lt.andrius.pom.tests.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -8,12 +7,13 @@ import org.testng.annotations.Test;
 public class HotelBookingTest extends TestBase {
     @BeforeMethod
     @Override
-    public void setUp(){
+    public void setUp() {
         HotelBookingPage.openUrl("https://www.ryanair.com/gb/en");
         HotelBookingPage.clickOnCookies();
     }
+
     @Test
-    public void testHotelBooking(){
+    public void testHotelBooking() {
         String destinationHotel = "Berlin";
         String expectedResult =
                 "Properties in Berlin (and vicinity), Germany. January 27, 2024 through January 28, 2024";
@@ -26,7 +26,6 @@ public class HotelBookingTest extends TestBase {
         HotelBookingPage.addTextToFindHotel(destinationHotel);
         HotelBookingPage.clickOnElementBerlin();
         HotelBookingPage.clickOnSearchButton();
-        HotelBookingPage.clickOnRejectAllCookiesButton();
 
         actualResult = HotelBookingPage.readTitle();
 

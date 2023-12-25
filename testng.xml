@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Demo automation test" parallel="classes" thread-count="4">
+<suite name="Demo automation test" parallel="classes" thread-count="5">
     <test name="All tests">
         <classes>
             <class name="lt.andrius.pom.tests.ryanair.LoginTest"/>
+            <class name="lt.andrius.pom.tests.ryanair.UpdateProfileInfoTest"/>
+            <class name="lt.andrius.pom.tests.ryanair.HotelBookingTest"/>
+            <class name="lt.andrius.pom.tests.ryanair.FlightSearchTest"/>
+            <class name="lt.andrius.pom.tests.ryanair.ChatBotTest"/>
         </classes>
     </test>
 </suite>

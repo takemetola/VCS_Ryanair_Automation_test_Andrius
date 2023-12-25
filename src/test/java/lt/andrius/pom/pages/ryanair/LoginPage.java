@@ -23,7 +23,6 @@ public class LoginPage {
     public static void inputEmail(String email) {
         Common.waitForElementToBeVisible(1, Locator.Ryanair.LoginPage.waitForInfoBox);
         Common.addText(Locator.Ryanair.LoginPage.inputEmail, email);
-
     }
 
     public static void inputPassword(String password) {

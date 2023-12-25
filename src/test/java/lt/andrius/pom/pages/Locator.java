@@ -92,16 +92,6 @@ public class Locator {
             public static By buttonclickSearch = By.xpath("//button[@ry-button " +
                     "and @data-ref='rooms-search-widget__cta' " +
                     "and @class='rooms-search-widget__start-search ry-button--gradient-yellow']");
-            public static By buttonClickRejectAll =
-                    By.xpath("//button[@id='onetrust-reject-all-handler']");
-            public static By buttonClickOnHotelLink =
-                    By.xpath("(//button[@type='button' " +
-                            "and @data-testid='uitk-gallery-item-current-trigger' " +
-                            "and @class='uitk-image-link'])[1]");
-            public static By buttonClickOnReserve =
-                    By.xpath("(//button[@data-stid='submit-hotel-reserve' " +
-                            "and @type='button' and @class='uitk-button uitk-button-medium uitk-button-primary'])[1]");
-            public static By buttonClickOnPayAtProperty = By.xpath("(//button[@type='submit'])[1]");
             public static By getTitle =
                     By.xpath("(//h1[@class='is-visually-hidden'])[2]");
             public static By waitForElementCalendar = By.xpath("//hp-input-button[@uniqueid='check-in' " +
@@ -113,18 +103,9 @@ public class Locator {
             public static By clickReject = By.xpath("//button[@data-ref='cookie.no-thanks']");
         }
 
-        public class ContactUsPage {
-            public static By waitForElement = By.xpath("//button[@data-ref='cookie.no-thanks']");
-            public static By clickOnNoThanks = By.xpath("//button[@data-ref='cookie.no-thanks']");
-            public static By clickOnButtonContactUs =
-                    By.xpath("//a[contains(@class,'legal-footer__links-item') " +
-                            "and contains(text(), 'Contact us')]");
-            public static By waitForElementtoBeClickable =
-                    By.xpath("//a[contains(@class,'legal-footer__links-item') " +
-                            "and contains(text(), 'Contact us')]");
+        public class ChatBotPage {
             public static By clickOnTagName =
                     By.xpath("//div[@id='article-toggle-16116483455505']/a");
-            public static By waitForElementLetsChat = By.xpath("//*[@id=article-toggle-16116483455505]/a");
             public static By waitForElementChatNow =
                     By.xpath("//a[@class='button button-outline-primary button-lg' " +
                             "and contains(text(), 'Chat now')]");

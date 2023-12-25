@@ -5,7 +5,7 @@ import lt.andrius.pom.pages.Locator;
 
 public class HotelBookingPage {
     public static void openUrl(String url) {
-        Common.setUpChrome();
+        Common.setUpChrome(2);
         Common.openUrl(url);
     }
 
@@ -37,23 +37,6 @@ public class HotelBookingPage {
 
     public static void clickOnSearchButton() {
         Common.clickOnElement(Locator.Ryanair.HotelBookingPage.buttonclickSearch);
-    }
-
-    public static void clickOnRejectAllCookiesButton() {
-        Common.clickOnElement(Locator.Ryanair.HotelBookingPage.buttonClickRejectAll);
-    }
-
-    public static void clickOnSelectHotelButton() {
-        Common.clickOnElement(Locator.Ryanair.HotelBookingPage.buttonClickOnHotelLink);
-    }
-
-    public static void clickOnReserveButon() {
-        Common.scrollWindowByActionsPlus1000Y();
-        Common.clickOnElement(Locator.Ryanair.HotelBookingPage.buttonClickOnReserve);
-    }
-
-    public static void clickOnPayAtProperty() {
-        Common.clickOnElement(Locator.Ryanair.HotelBookingPage.buttonClickOnPayAtProperty);
     }
 
     public static String readTitle() {

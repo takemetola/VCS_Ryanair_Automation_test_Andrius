@@ -58,3 +58,19 @@
 7. Click on Reject all cookies button.
 
 **Expected Result**: Get a list of available hotels in the area during selected dates.
+
+---
+
+## Test Case 5 - Verify the chatbot functionality
+**Description**: Verify the chatbot functionality.
+
+**Steps**:
+1. Open the website.
+2. Click on the "Let's Chat" menu.
+3. Click on the "Chat Now" button.
+4. Agree to the cookies policy.
+5. Enter the name. (Tom Tom)
+6. Enter the email. (test01@gmail.com)
+7. Click on the "Start Chat" button.
+
+**Expected Result**: The chatbot is connected and ready to help.

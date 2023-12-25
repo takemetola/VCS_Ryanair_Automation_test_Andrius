@@ -19,6 +19,15 @@ public class Common {
         Driver.getDriver().get(url);
     }
 
+    public static void quitDriver() {
+        Driver.quitDriver();
+    }
+
+    public static void setUpChrome(int durationOfSeconds) {
+        Driver.setUpChromeDriver();
+        Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(durationOfSeconds));
+    }
+
     private static WebElement getElement(By locator) {
         return Driver.getDriver().findElement(locator);
     }

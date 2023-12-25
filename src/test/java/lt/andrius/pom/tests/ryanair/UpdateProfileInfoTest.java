@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class UpdateProfileInfoTest extends TestBase {
     @BeforeMethod
     @Override
-    public void setUp(){
+    public void setUp() {
         UpdateProfileInfoPage.openUrl("https://www.ryanair.com/gb/en");
         UpdateProfileInfoPage.clickOnCookies();
         String email = "jurkusand@gmail.com";
@@ -19,6 +19,7 @@ public class UpdateProfileInfoTest extends TestBase {
         LoginPage.clickToLogin();
 
     }
+
     @Test
     public void testUpdateProfile_DateOfBirth() throws InterruptedException {
 

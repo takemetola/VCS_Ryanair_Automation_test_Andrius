@@ -10,6 +10,7 @@ public class ChatBotTest extends TestBase {
     public void setUp() {
         ChatBotPage.openUrl("https://help.ryanair.com/hc/en-gb/sections/12504616835857");
     }
+
     @Test
     public void testChatBotMessage() {
         String name = "Tom Tom";

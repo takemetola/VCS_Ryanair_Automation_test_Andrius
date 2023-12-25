@@ -30,7 +30,6 @@ public class UpdateProfileInfoPage {
     public static void addDay(String day) {
         Common.waitForElementToBeVisible(1, Locator.Ryanair.UpdateProfileInfoPage.waitForElementBox);
         Common.addText(Locator.Ryanair.UpdateProfileInfoPage.textAddDay, day);
-
     }
 
     public static void addMonth(String month) {

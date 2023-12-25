@@ -18,7 +18,7 @@ public class FlightSearchPage {
     }
 
     public static void inputDeparture() {
-        Common.waitForElementToBeVisible(1,Locator.Ryanair.FlightSearchPage.waitForElement);
+        Common.waitForElementToBeVisible(1, Locator.Ryanair.FlightSearchPage.waitForElement);
         Common.clickOnElement(Locator.Ryanair.FlightSearchPage.clickOnElementVNO);
     }
 
