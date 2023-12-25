@@ -1,4 +1,4 @@
-# Test Cases for [Ryanair](https://www.ryanair.com/gb/en)
+# Test Cases for [Ryanair.com](https://www.ryanair.com/gb/en)
 
 ## Test Case 1 - New Account Set Up
 **Description**: Verify that the user login functionality works correctly.
