@@ -46,17 +46,24 @@ public class Common {
         return true;
     }
 
-    public static void scrollWindowByActions() {
+    public static void scrollWindowByActionsPlus300Y() {
         Actions actions = new Actions(Driver.getDriver());
         actions
                 .scrollByAmount(0, 300)
                 .perform();
     }
 
-    public static void scrollWindowByActions2() {
+    public static void scrollWindowByActionsMinus300Y() {
         Actions actions = new Actions(Driver.getDriver());
         actions
                 .scrollByAmount(0, -300)
+                .perform();
+    }
+
+    public static void scrollWindowByActionsPlus1000Y() {
+        Actions actions = new Actions(Driver.getDriver());
+        actions
+                .scrollByAmount(0, 100)
                 .perform();
     }
 }

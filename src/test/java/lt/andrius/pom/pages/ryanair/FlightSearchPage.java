@@ -30,7 +30,7 @@ public class FlightSearchPage {
     }
 
     public static void clickOnDepartDateBox() {
-        Common.scrollWindowByActions();
+        Common.scrollWindowByActionsPlus300Y();
         Common.clickOnElement(Locator.Ryanair.FlightSearchPage.clickOnDeparturesDateBox);
     }
 
@@ -39,7 +39,7 @@ public class FlightSearchPage {
     }
 
     public static void clickOnSearchBox() {
-        Common.scrollWindowByActions2();
+        Common.scrollWindowByActionsMinus300Y();
         Common.clickOnElement(Locator.Ryanair.FlightSearchPage.clickOnBox);
     }
 

@@ -48,10 +48,44 @@ public class Locator {
             public static By clickOnDeparturesDateBox =
                     By.xpath("//div[@data-id='2024-01-31']");
             public static By clickOnDone =
-                    By.xpath("//button[@class='passengers__confirm-button ry-button--anchor-blue ry-button--anchor']");
+                    By.xpath("//button[@class='passengers__confirm-button " +
+                            "ry-button--anchor-blue ry-button--anchor']");
             public static By clickOnBox = By.xpath("//button[@aria-label='Search']");
             public static By getTextFlighNumber =
                     By.xpath("//div[@class='card-flight-num__content' and @data-ref='FR 6637']");
+        }
+
+        public class HotelBookingPage {
+
+            public static By buttonClickHotels =
+                    By.xpath("//button[@data-ref='search-widget-tabs__rooms']");
+            public static By addTexToBox =
+                    By.xpath("//input[@class='input-button__input ng-star-inserted']");
+            public static By divTextBerlin =
+                    By.xpath("(//hp-room-search-location-item[div[@data-ref='location-item__name' " +
+                            "and @class='location__name b2' and .='Berlin']])[2]");
+            public static By clickOnInputDate =
+                    By.xpath("//hp-input-button[@uniqueid='check-in' " +
+                            "and @class='rooms-widget-controls__control rooms-widget-controls__control--date " +
+                            "input-button--connected-right']");
+            public static By divCalendarClickStart =
+                    By.xpath("(//div[@data-id='2024-01-27'])[2]");
+            public static By divCalendarClickEnd = By.xpath("(//div[@data-id='2024-01-28'])[2]");
+            public static By buttonclickSearch = By.xpath("//button[@ry-button " +
+                    "and @data-ref='rooms-search-widget__cta' " +
+                    "and @class='rooms-search-widget__start-search ry-button--gradient-yellow']");
+            public static By buttonClickRejectAll =
+                    By.xpath("//button[@id='onetrust-reject-all-handler']");
+            public static By buttonClickOnHotelLink =
+                    By.xpath("(//button[@type='button' " +
+                            "and @data-testid='uitk-gallery-item-current-trigger' " +
+                            "and @class='uitk-image-link'])[1]");
+            public static By buttonClickOnReserve =
+                    By.xpath("(//button[@data-stid='submit-hotel-reserve' " +
+                            "and @type='button' and @class='uitk-button uitk-button-medium uitk-button-primary'])[1]");
+            public static By buttonClickOnPayAtProperty = By.xpath("(//button[@type='submit'])[1]");
+            public static By getTitle =
+                    By.xpath("(//h1[@class='is-visually-hidden'])[2]");
         }
     }
 }
