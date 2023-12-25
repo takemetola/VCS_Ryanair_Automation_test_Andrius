@@ -18,10 +18,12 @@ public class FlightSearchPage {
     }
 
     public static void inputDeparture() {
+        Common.waitForElementToBeVisible(1,Locator.Ryanair.FlightSearchPage.waitForElement);
         Common.clickOnElement(Locator.Ryanair.FlightSearchPage.clickOnElementVNO);
     }
 
     public static void inputDestination() {
+        Common.waitForElementToBeVisible(1, Locator.Ryanair.FlightSearchPage.waitForElementGermany);
         Common.clickOnElement(Locator.Ryanair.FlightSearchPage.clickOnElementGermany);
     }
 
@@ -30,6 +32,7 @@ public class FlightSearchPage {
     }
 
     public static void clickOnDepartDateBox() {
+        Common.waitForElementToBeVisible(1, Locator.Ryanair.FlightSearchPage.waitForDepartBox);
         Common.scrollWindowByActionsPlus300Y();
         Common.clickOnElement(Locator.Ryanair.FlightSearchPage.clickOnDeparturesDateBox);
     }
@@ -44,6 +47,11 @@ public class FlightSearchPage {
     }
 
     public static String readFlightNumber() {
+        Common.waitForElementToBeVisible(2, Locator.Ryanair.FlightSearchPage.waitForFlightNumber);
         return Common.getText(Locator.Ryanair.FlightSearchPage.getTextFlighNumber);
+    }
+
+    public static void clickOnCookies() {
+        Common.clickOnElement(Locator.Ryanair.FlightSearchPage.clickReject);
     }
 }

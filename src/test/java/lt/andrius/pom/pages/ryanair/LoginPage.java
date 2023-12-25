@@ -21,6 +21,7 @@ public class LoginPage {
     }
 
     public static void inputEmail(String email) {
+        Common.waitForElementToBeVisible(1, Locator.Ryanair.LoginPage.waitForInfoBox);
         Common.addText(Locator.Ryanair.LoginPage.inputEmail, email);
 
     }
@@ -30,10 +31,12 @@ public class LoginPage {
     }
 
     public static void clickToLogin() {
+        Common.waitForElementToBeVisible(2, Locator.Ryanair.LoginPage.waitButtonLogin);
         Common.clickOnElement(Locator.Ryanair.LoginPage.buttonClickLogin);
     }
 
     public static String readProfileEmail() {
+        Common.waitForElementToBeVisible(1, Locator.Ryanair.LoginPage.waitForEmailBox);
         return Common.getText(Locator.Ryanair.LoginPage.spanEmail);
     }
 

@@ -9,7 +9,12 @@ public class UpdateProfileInfoPage {
         Common.openUrl(url);
     }
 
+    public static void clickOnCookies() {
+        Common.clickOnElement(Locator.Ryanair.UpdateProfileInfoPage.clickOnReject);
+    }
+
     public static void clickOnProfileEmail() {
+        Common.waitForElementToBeVisible(2, Locator.Ryanair.UpdateProfileInfoPage.waitForEmailBox);
         Common.clickOnElement(Locator.Ryanair.UpdateProfileInfoPage.clickOnEmail);
     }
 
@@ -18,10 +23,12 @@ public class UpdateProfileInfoPage {
     }
 
     public static void clickOnEditButton() {
+        Common.waitForElementToBeVisible(1, Locator.Ryanair.UpdateProfileInfoPage.waitForEditButton);
         Common.clickOnElement(Locator.Ryanair.UpdateProfileInfoPage.clickOnButtonEdit);
     }
 
     public static void addDay(String day) {
+        Common.waitForElementToBeVisible(1, Locator.Ryanair.UpdateProfileInfoPage.waitForElementBox);
         Common.addText(Locator.Ryanair.UpdateProfileInfoPage.textAddDay, day);
 
     }
@@ -39,6 +46,7 @@ public class UpdateProfileInfoPage {
     }
 
     public static String readDateOfBirth() {
+        Common.waitForElementToBeVisible(1, Locator.Ryanair.UpdateProfileInfoPage.waitToReadText);
         return Common.getText(Locator.Ryanair.UpdateProfileInfoPage.readSpanDate);
     }
 }

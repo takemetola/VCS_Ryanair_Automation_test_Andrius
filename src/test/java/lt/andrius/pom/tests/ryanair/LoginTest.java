@@ -1,5 +1,3 @@
-package lt.andrius.pom.tests.ryanair;
-
 import lt.andrius.pom.pages.ryanair.LoginPage;
 import lt.andrius.pom.tests.TestBase;
 import org.testng.Assert;
@@ -24,11 +22,9 @@ public class LoginTest extends TestBase {
         String actualResult;
 
         LoginPage.clickOnLoginButton();
-        Thread.sleep(1000);
         LoginPage.inputEmail(email);
         LoginPage.inputPassword(password);
         LoginPage.clickToLogin();
-        Thread.sleep(1000);
 
         actualResult = LoginPage.readProfileEmail();
 

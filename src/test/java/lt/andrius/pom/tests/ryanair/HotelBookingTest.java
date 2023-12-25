@@ -10,26 +10,23 @@ public class HotelBookingTest extends TestBase {
     @Override
     public void setUp(){
         HotelBookingPage.openUrl("https://www.ryanair.com/gb/en");
-        LoginPage.clickOnCookies();
+        HotelBookingPage.clickOnCookies();
     }
     @Test
-    public void testHotelBooking() throws InterruptedException {
+    public void testHotelBooking(){
         String destinationHotel = "Berlin";
         String expectedResult =
                 "Properties in Berlin (and vicinity), Germany. January 27, 2024 through January 28, 2024";
         String actualResult;
 
         HotelBookingPage.clickOnButtonHotels();
-        Thread.sleep(1000);
         HotelBookingPage.clickOnChooseCheckInDate();
         HotelBookingPage.clickOnStartDate();
         HotelBookingPage.clickOnEndDate();
         HotelBookingPage.addTextToFindHotel(destinationHotel);
-        Thread.sleep(1000);
         HotelBookingPage.clickOnElementBerlin();
         HotelBookingPage.clickOnSearchButton();
         HotelBookingPage.clickOnRejectAllCookiesButton();
-        Thread.sleep(2000);
 
         actualResult = HotelBookingPage.readTitle();
 

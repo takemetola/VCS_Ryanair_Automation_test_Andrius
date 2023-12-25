@@ -8,21 +8,19 @@ import org.testng.annotations.Test;
 public class UpdateProfileInfoTest extends TestBase {
     @BeforeMethod
     @Override
-    public void setUp() throws InterruptedException {
+    public void setUp(){
         UpdateProfileInfoPage.openUrl("https://www.ryanair.com/gb/en");
-        LoginPage.clickOnCookies();
+        UpdateProfileInfoPage.clickOnCookies();
         String email = "jurkusand@gmail.com";
         String password = "Tomukas123";
         LoginPage.clickOnLoginButton();
-        Thread.sleep(1000);
         LoginPage.inputEmail(email);
         LoginPage.inputPassword(password);
         LoginPage.clickToLogin();
-        Thread.sleep(1000);
 
     }
     @Test
-    public void testUpdateProfile_DateOfBirth_PhoneNumber() throws InterruptedException {
+    public void testUpdateProfile_DateOfBirth() throws InterruptedException {
 
         String day = "20";
         String month = "04";
@@ -30,16 +28,15 @@ public class UpdateProfileInfoTest extends TestBase {
         String expectedResult = "** / ** / 2000";
         String actualResult;
 
+        Thread.sleep(1000);
         UpdateProfileInfoPage.clickOnProfileEmail();
         UpdateProfileInfoPage.clickOnMyRyanairButton();
-        Thread.sleep(1000);
         UpdateProfileInfoPage.clickOnEditButton();
-        Thread.sleep(1000);
+
         UpdateProfileInfoPage.addDay(day);
         UpdateProfileInfoPage.addMonth(month);
         UpdateProfileInfoPage.addYear(year);
         UpdateProfileInfoPage.clickOnSave();
-        Thread.sleep(1000);
 
         actualResult = UpdateProfileInfoPage.readDateOfBirth();
 

@@ -18,10 +18,12 @@ public class HotelBookingPage {
     }
 
     public static void clickOnElementBerlin() {
+        Common.waitForElementToBeVisible(1, Locator.Ryanair.HotelBookingPage.waitForDropMenu);
         Common.clickOnElement(Locator.Ryanair.HotelBookingPage.divTextBerlin);
     }
 
     public static void clickOnChooseCheckInDate() {
+        Common.waitForElementToBeVisible(1, Locator.Ryanair.HotelBookingPage.waitForElementCalendar);
         Common.clickOnElement(Locator.Ryanair.HotelBookingPage.clickOnInputDate);
     }
 
@@ -56,5 +58,9 @@ public class HotelBookingPage {
 
     public static String readTitle() {
        return Common.getText(Locator.Ryanair.HotelBookingPage.getTitle);
+    }
+
+    public static void clickOnCookies() {
+        Common.clickOnElement(Locator.Ryanair.HotelBookingPage.clickReject);
     }
 }
