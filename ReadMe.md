@@ -55,7 +55,6 @@
 4. Select Check-out date. (28/02/2024)
 5. Add city name in the Destination box and select from the list. (Berlin, Germany)
 6. Click on search button.
-7. Click on Reject all cookies button.
 
 **Expected Result**: Get a list of available hotels in the area during selected dates.
 
@@ -68,9 +67,8 @@
 1. Open the website.
 2. Click on the "Let's Chat" menu.
 3. Click on the "Chat Now" button.
-4. Agree to the cookies policy.
-5. Enter the name. (Tom Tom)
-6. Enter the email. (test01@gmail.com)
-7. Click on the "Start Chat" button.
+4. Enter the name. (Tom Tom)
+5. Enter the email. (test01@gmail.com)
+6. Click on the "Start Chat" button.
 
 **Expected Result**: The chatbot is connected and ready to help.
