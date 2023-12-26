@@ -15,7 +15,7 @@ public class Driver {
 
         ChromeOptions option = new ChromeOptions();
 
-        option.addArguments("--headless=new");
+       // option.addArguments("--headless=new");
         option.addArguments("--start-maximized");
 
         driver.set(new ChromeDriver(option));

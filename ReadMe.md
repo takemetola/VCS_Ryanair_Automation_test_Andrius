@@ -5,8 +5,8 @@
 
 **Steps**:
 1. Click on Log In button on the Ryanair homepage.
-2. Enter valid email. (jurkusand@gmail.com)
-3. Enter valid password. (Tomukas123)
+2. Enter valid email. Input: 'jurkusand@gmail.com'
+3. Enter valid password. Input: 'Tomukas123'
 4. Click on 'Log in'.
 
 **Expected Result**: The user should be successfully logged in and redirected to homepage with User profile logged in. (jurkusand@gmail.com)
@@ -20,7 +20,7 @@
 1. Click On Profile email on the Ryanair homepage.
 2. Select myRyanair.
 3. Click on Edit in Date of Birth section.
-4. Enter date of birth. (20/04/2000).
+4. Enter date of birth. Input: '20/04/2000'
 5. Click on Save button.
 
 **Expected Result**: Date of birth section is successfully changed and showing ** / ** / 2000 as a result.
@@ -36,7 +36,7 @@
 3. Select Vilnius as departure airport.
 4. Select Germany as arrival destination.
 5. Select Berlin Brandenburg airport.
-6. Select departure date. (31/01/2024)
+6. Select departure date. Input: '31/01/2024'
 7. Select 1 Adult Passenger.
 8. Click on search.
 9. Read Flight Number. (FR 6637)
@@ -51,8 +51,8 @@
 **Steps**:
 1. Open Ryanair homepage.
 2. Select Hotels section.
-3. Select Check-in date. (27/02/2024)
-4. Select Check-out date. (28/02/2024)
+3. Select Check-in date. Input: '27/02/2024'
+4. Select Check-out date. Input: '28/02/2024'
 5. Add city name in the Destination box and select from the list. (Berlin, Germany)
 6. Click on search button.
 
@@ -60,15 +60,15 @@
 
 ---
 
-## Test Case 5 - Verify the chatbot functionality
-**Description**: Verify the chatbot functionality.
+## Test Case 5 - Verify Chat bot functionality
+**Description**: Verify function of Chat bot by providing name and email and connecting to Chat window.
 
 **Steps**:
 1. Open the website.
 2. Click on the "Let's Chat" menu.
 3. Click on the "Chat Now" button.
-4. Enter the name. (Tom Tom)
-5. Enter the email. (test01@gmail.com)
+4. Enter the name. Input: 'Tom Tom'
+5. Enter the email. Input: 'test01@gmail.com'
 6. Click on the "Start Chat" button.
 
-**Expected Result**: The chatbot is connected and ready to help.
+**Expected Result**: The Chat bot is functional and ready to receive input message.
