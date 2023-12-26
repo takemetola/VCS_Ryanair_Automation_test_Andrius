@@ -3,6 +3,7 @@ import lt.andrius.pom.pages.ryanair.UpdateProfileInfoPage;
 import lt.andrius.pom.tests.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class UpdateProfileInfoTest extends TestBase {
@@ -20,13 +21,17 @@ public class UpdateProfileInfoTest extends TestBase {
 
     }
 
-    @Test
-    public void testUpdateProfile_DateOfBirth() throws InterruptedException {
+    @DataProvider(name = "testUpdateProfile_DateOfBirth")
+    public static Object[][] provideDataForTestUpdateProfile_DateOfBirth() {
+        return new Object[][]{
+                {"20", "04", "2000", "** / ** / 2000"}
+        };
+    }
 
-        String day = "20";
-        String month = "04";
-        String year = "2000";
-        String expectedResult = "** / ** / 2000";
+    @Test(dataProvider = "testUpdateProfile_DateOfBirth")
+    public void testUpdateProfile_DateOfBirth(String day, String month, String year, String expectedResult)
+            throws InterruptedException {
+
         String actualResult;
 
         Thread.sleep(1000);

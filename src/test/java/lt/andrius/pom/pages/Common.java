@@ -72,4 +72,5 @@ public class Common {
     public static void switchToFrame(By locator) {
         Driver.getDriver().switchTo().frame(getElement(locator));
     }
+
 }

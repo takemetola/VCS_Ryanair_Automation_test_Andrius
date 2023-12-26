@@ -14,7 +14,6 @@ public class UpdateProfileInfoPage {
     }
 
     public static void clickOnProfileEmail() {
-        Common.waitForElementToBeVisible(2, Locator.Ryanair.UpdateProfileInfoPage.waitForEmailBox);
         Common.clickOnElement(Locator.Ryanair.UpdateProfileInfoPage.clickOnEmail);
     }
 
