@@ -2,6 +2,7 @@ import lt.andrius.pom.pages.ryanair.LoginPage;
 import lt.andrius.pom.tests.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class LoginTest extends TestBase {
@@ -14,11 +15,15 @@ public class LoginTest extends TestBase {
         LoginPage.clickOnCookies();
     }
 
-    @Test
-    public void testLogin() throws InterruptedException {
-        String email = "jurkusand@gmail.com";
-        String password = "Tomukas123";
-        String expectedResult = "jurkusand@gmail.com";
+    @DataProvider(name = "testLogin")
+    public static Object[][] provideDataForTestLogin() {
+        return new Object[][]{
+                {"jurkusand@gmail.com", "Tomukas123", "jurkusand@gmail.com"}
+        };
+    }
+
+    @Test(dataProvider = "testLogin")
+    public void testLogin(String email, String password, String expectedResult) {
         String actualResult;
 
         LoginPage.clickOnLoginButton();
