@@ -2,6 +2,7 @@ import lt.andrius.pom.pages.ryanair.HotelBookingPage;
 import lt.andrius.pom.tests.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class HotelBookingTest extends TestBase {
@@ -12,11 +13,15 @@ public class HotelBookingTest extends TestBase {
         HotelBookingPage.clickOnCookies();
     }
 
-    @Test
-    public void testHotelBooking() {
-        String destinationHotel = "Berlin";
-        String expectedResult =
-                "Properties in Berlin (and vicinity), Germany. January 27, 2024 through January 28, 2024";
+    @DataProvider(name = "testHotelBooking")
+    public static Object[][] provideDataForTestHotelBooking() {
+        return new Object[][]{
+                {"Berlin", "Properties in Berlin (and vicinity), Germany. January 27, 2024 through January 28, 2024"}
+        };
+    }
+
+    @Test(dataProvider = "testHotelBooking")
+    public void testHotelBooking(String destinationHotel, String expectedResult) {
         String actualResult;
 
         HotelBookingPage.clickOnButtonHotels();
