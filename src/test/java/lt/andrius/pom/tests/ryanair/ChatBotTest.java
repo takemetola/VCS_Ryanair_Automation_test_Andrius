@@ -2,6 +2,7 @@ import lt.andrius.pom.pages.ryanair.ChatBotPage;
 import lt.andrius.pom.tests.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class ChatBotTest extends TestBase {
@@ -11,11 +12,15 @@ public class ChatBotTest extends TestBase {
         ChatBotPage.openUrl("https://help.ryanair.com/hc/en-gb/sections/12504616835857");
     }
 
-    @Test
-    public void testChatBotMessage() {
-        String name = "Tom Tom";
-        String email = "test01@gmail.com";
-        String expectedResult = "Chat with us";
+    @DataProvider(name = "testChatBotMessage")
+    public static Object[][] provideDataForTestChatBotMessage() {
+        return new Object[][]{
+                {"Tom Tom", "test01@gmail.com", "Chat with us"}
+        };
+    }
+
+    @Test(dataProvider = "testChatBotMessage")
+    public void testChatBotMessage(String name, String email, String expectedResult) {
         String actualResult;
 
         ChatBotPage.clickOnLetsChatMenu();
