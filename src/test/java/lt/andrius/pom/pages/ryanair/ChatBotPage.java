@@ -24,7 +24,7 @@ public class ChatBotPage {
     }
 
     public static void addTextName(String name) {
-        Common.waitForElementToBeVisible(3, Locator.Ryanair.ChatBotPage.waitForChatBox);
+        Common.waitForElementToBeVisible(1, Locator.Ryanair.ChatBotPage.waitForChatBox);
         Common.switchToFrame(Locator.Ryanair.ChatBotPage.switchToIFrame);
         Common.addText(Locator.Ryanair.ChatBotPage.addTextToNameBox, name);
 

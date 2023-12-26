@@ -15,12 +15,12 @@ public class ChatBotTest extends TestBase {
     @DataProvider(name = "testChatBotMessage")
     public static Object[][] provideDataForTestChatBotMessage() {
         return new Object[][]{
-                {"Tom Tom", "test01@gmail.com", "Chat with us"}
+                {"Tom Tom", "test01@gmail.com", "How can I help you today?"}
         };
     }
 
     @Test(dataProvider = "testChatBotMessage")
-    public void testChatBotMessage(String name, String email, String expectedResult) {
+    public void testChatBotMessage(String name, String email, String expectedResult){
         String actualResult;
 
         ChatBotPage.clickOnLetsChatMenu();

@@ -18,7 +18,7 @@ public class Locator {
             public static By clickOnNoThanks = By.xpath("//button[@data-ref='cookie.no-thanks']");
             public static By waitForInfoBox = By.xpath("//input[@name='email']");
             public static By waitForEmailBox = By.xpath("//span[text()='jurkusand@gmail.com']");
-            public static By waitButtonLogin =  By.xpath("//button[@type='submit' " +
+            public static By waitButtonLogin = By.xpath("//button[@type='submit' " +
                     "and @class='auth-submit__button ry-button--gradient-yellow']");
         }
 
@@ -99,7 +99,7 @@ public class Locator {
                     "input-button--connected-right']");
             public static By waitForDropMenu =
                     By.xpath("(//hp-room-search-location-item[div[@data-ref='location-item__name' " +
-                    "and @class='location__name b2' and .='Berlin']])[2]");
+                            "and @class='location__name b2' and .='Berlin']])[2]");
             public static By clickReject = By.xpath("//button[@data-ref='cookie.no-thanks']");
         }
 
@@ -121,9 +121,11 @@ public class Locator {
             public static By waitForChatBox = By.xpath("//input[@id='2val-field_1.3.10--input']");
             public static By addTextToEmailBox = By.xpath("//input[@id='2val-field_1.3.10--input']");
             public static By waitForChatBoxElement =
-                    By.xpath("//div[contains(@class, 'styles__Container')]" +
-                            "/button[@data-testid='button-ok']");
-            public static By getChatBoxText = By.xpath("//h1[@class='Title-sc-mhgaxb-0 hrFxTj']");
+                    By.xpath("//div[@class='panelParagraph-3qh9g lineClamp-E9j4z'" +
+                            "and text()='How can I help you today?']");
+            public static By getChatBoxText =
+                    By.xpath("//div[@class='panelParagraph-3qh9g lineClamp-E9j4z' " +
+                            "and text()='How can I help you today?']");
             public static By switchToIFrame = By.xpath("//iframe[@id='webWidget']");
             public static By addTextToNameBox = By.xpath("//input[@id='1val-field_1.3.10--input']");
             public static By clickOnButtonStartChat =
