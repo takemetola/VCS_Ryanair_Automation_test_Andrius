@@ -69,20 +69,6 @@ public class Common {
                 .perform();
     }
 
-    public static void scrollWindowByActionsPlus1000Y() {
-        Actions actions = new Actions(Driver.getDriver());
-        actions
-                .scrollByAmount(0, 100)
-                .perform();
-    }
-
-    public static void scrollWindowByActionsMinusPlus3000Y() {
-        Actions actions = new Actions(Driver.getDriver());
-        actions
-                .scrollByAmount(0, 3000)
-                .perform();
-    }
-
     public static void switchToFrame(By locator) {
         Driver.getDriver().switchTo().frame(getElement(locator));
     }
