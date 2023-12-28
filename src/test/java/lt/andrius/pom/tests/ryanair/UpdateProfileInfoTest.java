@@ -1,3 +1,5 @@
+package lt.andrius.pom.tests.ryanair;
+
 import lt.andrius.pom.pages.ryanair.LoginPage;
 import lt.andrius.pom.pages.ryanair.UpdateProfileInfoPage;
 import lt.andrius.pom.tests.TestBase;
