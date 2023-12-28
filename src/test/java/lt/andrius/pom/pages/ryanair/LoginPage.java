@@ -2,18 +2,11 @@ package lt.andrius.pom.pages.ryanair;
 
 import lt.andrius.pom.pages.Common;
 import lt.andrius.pom.pages.Locator;
-import lt.andrius.pom.utils.Driver;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 public class LoginPage {
     public static void openUrl(String url) {
         Common.setUpChrome();
         Common.openUrl(url);
-    }
-
-    private static WebElement getElement(By locator) {
-        return Driver.getDriver().findElement(locator);
     }
 
     public static void clickOnLoginButton() {
