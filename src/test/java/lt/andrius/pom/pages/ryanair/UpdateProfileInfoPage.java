@@ -10,41 +10,41 @@ public class UpdateProfileInfoPage {
     }
 
     public static void clickOnCookies() {
-        Common.clickOnElement(Locator.Ryanair.UpdateProfileInfoPage.clickOnReject);
+        Common.clickOnElement(Locator.Ryanair.UpdateProfileInfoPage.buttonCookiesNo);
     }
 
     public static void clickOnProfileEmail() {
-        Common.clickOnElement(Locator.Ryanair.UpdateProfileInfoPage.clickOnEmail);
+        Common.clickOnElement(Locator.Ryanair.UpdateProfileInfoPage.buttonLogIn);
     }
 
     public static void clickOnMyRyanairButton() {
-        Common.clickOnElement(Locator.Ryanair.UpdateProfileInfoPage.clickOnButtonMyRyanair);
+        Common.clickOnElement(Locator.Ryanair.UpdateProfileInfoPage.buttonMyRyanair);
     }
 
     public static void clickOnEditButton() {
-        Common.waitForElementToBeVisible(1, Locator.Ryanair.UpdateProfileInfoPage.waitForEditButton);
-        Common.clickOnElement(Locator.Ryanair.UpdateProfileInfoPage.clickOnButtonEdit);
+        Common.waitForElementToBeVisible(1, Locator.Ryanair.UpdateProfileInfoPage.buttonEditWait);
+        Common.clickOnElement(Locator.Ryanair.UpdateProfileInfoPage.buttonEdit);
     }
 
     public static void addDay(String day) {
-        Common.waitForElementToBeVisible(1, Locator.Ryanair.UpdateProfileInfoPage.waitForElementBox);
-        Common.addText(Locator.Ryanair.UpdateProfileInfoPage.textAddDay, day);
+        Common.waitForElementToBeVisible(1, Locator.Ryanair.UpdateProfileInfoPage.inputDobWait);
+        Common.addText(Locator.Ryanair.UpdateProfileInfoPage.inputTxtDay, day);
     }
 
     public static void addMonth(String month) {
-        Common.addText(Locator.Ryanair.UpdateProfileInfoPage.textAddMonth, month);
+        Common.addText(Locator.Ryanair.UpdateProfileInfoPage.inputTxtMonth, month);
     }
 
     public static void addYear(String year) {
-        Common.addText(Locator.Ryanair.UpdateProfileInfoPage.textAddYear, year);
+        Common.addText(Locator.Ryanair.UpdateProfileInfoPage.inputTxtYear, year);
     }
 
     public static void clickOnSave() {
-        Common.clickOnElement(Locator.Ryanair.UpdateProfileInfoPage.clickOnButtonSave);
+        Common.clickOnElement(Locator.Ryanair.UpdateProfileInfoPage.buttonSave);
     }
 
     public static String readDateOfBirth() {
-        Common.waitForElementToBeVisible(1, Locator.Ryanair.UpdateProfileInfoPage.waitToReadText);
-        return Common.getText(Locator.Ryanair.UpdateProfileInfoPage.readSpanDate);
+        Common.waitForElementToBeVisible(1, Locator.Ryanair.UpdateProfileInfoPage.spanTxtDob);
+        return Common.getText(Locator.Ryanair.UpdateProfileInfoPage.spanDate);
     }
 }

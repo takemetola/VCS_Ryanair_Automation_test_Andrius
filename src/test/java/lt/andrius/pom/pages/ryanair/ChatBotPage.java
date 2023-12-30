@@ -10,36 +10,36 @@ public class ChatBotPage {
     }
 
     public static void clickOnLetsChatMenu() {
-        Common.clickOnElement(Locator.Ryanair.ChatBotPage.clickOnTagName);
+        Common.clickOnElement(Locator.Ryanair.ChatBotPage.divTagName);
     }
 
     public static void clickOnChatNowButton() {
-        Common.waitForElementToBeVisible(1, Locator.Ryanair.ChatBotPage.waitForElementChatNow);
-        Common.clickOnElement(Locator.Ryanair.ChatBotPage.clickOnLinkChatNow);
+        Common.waitForElementToBeVisible(1, Locator.Ryanair.ChatBotPage.buttonChatNow);
+        Common.clickOnElement(Locator.Ryanair.ChatBotPage.buttonLinkChatNow);
     }
 
     public static void clickOnCookiesAgree() {
-        Common.waitForElementToBeVisible(1, Locator.Ryanair.ChatBotPage.waitforCookies);
-        Common.clickOnElement(Locator.Ryanair.ChatBotPage.clickOnButtonAgree);
+        Common.waitForElementToBeVisible(1, Locator.Ryanair.ChatBotPage.buttonAgreeCookies);
+        Common.clickOnElement(Locator.Ryanair.ChatBotPage.buttonAgree);
     }
 
     public static void addTextName(String name) {
-        Common.waitForElementToBeVisible(1, Locator.Ryanair.ChatBotPage.waitForChatBox);
-        Common.switchToFrame(Locator.Ryanair.ChatBotPage.switchToIFrame);
-        Common.addText(Locator.Ryanair.ChatBotPage.addTextToNameBox, name);
+        Common.waitForElementToBeVisible(1, Locator.Ryanair.ChatBotPage.inputForChatBoxWait);
+        Common.switchToFrame(Locator.Ryanair.ChatBotPage.iFrameWidget);
+        Common.addText(Locator.Ryanair.ChatBotPage.inputTxtNameBox, name);
 
     }
 
     public static void addTextEmail(String email) {
-        Common.addText(Locator.Ryanair.ChatBotPage.addTextToEmailBox, email);
+        Common.addText(Locator.Ryanair.ChatBotPage.inputTxtToEmailBox, email);
     }
 
     public static String readChatBox() {
-        Common.waitForElementToBeVisible(2, Locator.Ryanair.ChatBotPage.waitForChatBoxElement);
-        return Common.getText(Locator.Ryanair.ChatBotPage.getChatBoxText);
+        Common.waitForElementToBeVisible(2, Locator.Ryanair.ChatBotPage.divParagraph);
+        return Common.getText(Locator.Ryanair.ChatBotPage.divChatBoxText);
     }
 
     public static void clickOnStartChatButton() {
-        Common.clickOnElement(Locator.Ryanair.ChatBotPage.clickOnButtonStartChat);
+        Common.clickOnElement(Locator.Ryanair.ChatBotPage.buttonStartChat);
     }
 }

@@ -13,35 +13,34 @@ public class Locator {
                     By.xpath("//button[@type='submit' " +
                             "and @class='auth-submit__button ry-button--gradient-yellow']");
             public static By spanEmail = By.xpath("//span[text()='jurkusand@gmail.com']");
-            public static By waitForElement = By.xpath("//button[@data-ref='cookie.no-thanks']");
+            public static By buttonWaitCookieNoThanks = By.xpath("//button[@data-ref='cookie.no-thanks']");
 
-            public static By clickOnNoThanks = By.xpath("//button[@data-ref='cookie.no-thanks']");
-            public static By waitForInfoBox = By.xpath("//input[@name='email']");
-            public static By waitForEmailBox = By.xpath("//span[text()='jurkusand@gmail.com']");
-            public static By waitButtonLogin = By.xpath("//button[@type='submit' " +
+            public static By buttonNoThanks = By.xpath("//button[@data-ref='cookie.no-thanks']");
+            public static By inputEmailBox = By.xpath("//input[@name='email']");
+            public static By spanEmailBox = By.xpath("//span[text()='jurkusand@gmail.com']");
+            public static By buttonWaitLogin = By.xpath("//button[@type='submit' " +
                     "and @class='auth-submit__button ry-button--gradient-yellow']");
         }
 
         public class UpdateProfileInfoPage {
 
-            public static By clickOnEmail = By.xpath("//button[@aria-label='Log In']");
-            public static By clickOnButtonMyRyanair = By.xpath("//a[@aria-label='myRyanair']");
-            public static By clickOnButtonEdit = By.xpath("//button[@data-ref='header-action-edit' " +
+            public static By buttonLogIn = By.xpath("//button[@aria-label='Log In']");
+            public static By buttonMyRyanair = By.xpath("//a[@aria-label='myRyanair']");
+            public static By buttonEdit = By.xpath("//button[@data-ref='header-action-edit' " +
                     "and @class='ng-tns-c663872481-1 " +
                     "ry-button--anchor-blue ry-button--medium ry-button--anchor']");
-            public static By textAddDay = By.xpath("//input[@name='dob-day']");
-            public static By textAddMonth = By.xpath("//input[@name='dob-month']");
-            public static By textAddYear = By.xpath("//input[@name='dob-year']");
-            public static By clickOnButtonSave = By.xpath("//button[@id='saveBtn']");
+            public static By inputTxtDay = By.xpath("//input[@name='dob-day']");
+            public static By inputTxtMonth = By.xpath("//input[@name='dob-month']");
+            public static By inputTxtYear = By.xpath("//input[@name='dob-year']");
+            public static By buttonSave = By.xpath("//button[@id='saveBtn']");
 
-            public static By readSpanDate = By.xpath("//span[@data-ref='date-of-birth']");
-            public static By waitForEmailBox = By.xpath("//button[@aria-label='Log In']");
-            public static By waitForEditButton = By.xpath("//button[@data-ref='header-action-edit' " +
+            public static By spanDate = By.xpath("//span[@data-ref='date-of-birth']");
+            public static By buttonEditWait = By.xpath("//button[@data-ref='header-action-edit' " +
                     "and @class='ng-tns-c663872481-1 " +
                     "ry-button--anchor-blue ry-button--medium ry-button--anchor']");
-            public static By waitForElementBox = By.xpath("//input[@name='dob-day']");
-            public static By waitToReadText = By.xpath("//span[@data-ref='date-of-birth']");
-            public static By clickOnReject = By.xpath("//button[@data-ref='cookie.no-thanks']");
+            public static By inputDobWait = By.xpath("//input[@name='dob-day']");
+            public static By spanTxtDob = By.xpath("//span[@data-ref='date-of-birth']");
+            public static By buttonCookiesNo = By.xpath("//button[@data-ref='cookie.no-thanks']");
         }
 
         public class FlightSearchPage {
@@ -75,14 +74,14 @@ public class Locator {
 
         public class HotelBookingPage {
 
-            public static By buttonClickHotels =
+            public static By buttonHotels =
                     By.xpath("//button[@data-ref='search-widget-tabs__rooms']");
-            public static By addTexToBox =
+            public static By inputTxtBox =
                     By.xpath("//input[@class='input-button__input ng-star-inserted']");
             public static By divTextBerlin =
                     By.xpath("(//hp-room-search-location-item[div[@data-ref='location-item__name' " +
                             "and @class='location__name b2' and .='Berlin']])[2]");
-            public static By clickOnInputDate =
+            public static By inputDate =
                     By.xpath("//hp-input-button[@uniqueid='check-in' " +
                             "and @class='rooms-widget-controls__control rooms-widget-controls__control--date " +
                             "input-button--connected-right']");
@@ -92,43 +91,43 @@ public class Locator {
             public static By buttonclickSearch = By.xpath("//button[@ry-button " +
                     "and @data-ref='rooms-search-widget__cta' " +
                     "and @class='rooms-search-widget__start-search ry-button--gradient-yellow']");
-            public static By getTitle =
+            public static By headerTitle =
                     By.xpath("(//h1[@class='is-visually-hidden'])[2]");
-            public static By waitForElementCalendar = By.xpath("//hp-input-button[@uniqueid='check-in' " +
+            public static By inputCalendar = By.xpath("//hp-input-button[@uniqueid='check-in' " +
                     "and @class='rooms-widget-controls__control rooms-widget-controls__control--date " +
                     "input-button--connected-right']");
-            public static By waitForDropMenu =
+            public static By divLocation =
                     By.xpath("(//hp-room-search-location-item[div[@data-ref='location-item__name' " +
                             "and @class='location__name b2' and .='Berlin']])[2]");
-            public static By clickReject = By.xpath("//button[@data-ref='cookie.no-thanks']");
+            public static By buttonRejectCookies = By.xpath("//button[@data-ref='cookie.no-thanks']");
         }
 
         public class ChatBotPage {
-            public static By clickOnTagName =
+            public static By divTagName =
                     By.xpath("//div[@id='article-toggle-16116483455505']/a");
-            public static By waitForElementChatNow =
+            public static By buttonChatNow =
                     By.xpath("//a[@class='button button-outline-primary button-lg' " +
                             "and contains(text(), 'Chat now')]");
-            public static By clickOnLinkChatNow =
+            public static By buttonLinkChatNow =
                     By.xpath("//a[@class='button button-outline-primary button-lg' " +
                             "and contains(text(), 'Chat now')]");
-            public static By clickOnButtonAgree =
+            public static By buttonAgree =
                     By.xpath("//button[@class='cookie-popup-with-overlay__button' " +
                             "and text()='Yes, I agree']");
-            public static By waitforCookies =
+            public static By buttonAgreeCookies =
                     By.xpath("//button[@class='cookie-popup-with-overlay__button' " +
                             "and text()='Yes, I agree']");
-            public static By waitForChatBox = By.xpath("//input[@id='2val-field_1.3.10--input']");
-            public static By addTextToEmailBox = By.xpath("//input[@id='2val-field_1.3.10--input']");
-            public static By waitForChatBoxElement =
+            public static By inputForChatBoxWait = By.xpath("//input[@id='2val-field_1.3.10--input']");
+            public static By inputTxtToEmailBox = By.xpath("//input[@id='2val-field_1.3.10--input']");
+            public static By divParagraph =
                     By.xpath("//div[@class='panelParagraph-3qh9g lineClamp-E9j4z'" +
                             "and text()='How can I help you today?']");
-            public static By getChatBoxText =
+            public static By divChatBoxText =
                     By.xpath("//div[@class='panelParagraph-3qh9g lineClamp-E9j4z' " +
                             "and text()='How can I help you today?']");
-            public static By switchToIFrame = By.xpath("//iframe[@id='webWidget']");
-            public static By addTextToNameBox = By.xpath("//input[@id='1val-field_1.3.10--input']");
-            public static By clickOnButtonStartChat =
+            public static By iFrameWidget = By.xpath("//iframe[@id='webWidget']");
+            public static By inputTxtNameBox = By.xpath("//input[@id='1val-field_1.3.10--input']");
+            public static By buttonStartChat =
                     By.xpath("//button[@class='sc-htpNat jzezno' and contains(text(), 'Start chat')]");
         }
     }

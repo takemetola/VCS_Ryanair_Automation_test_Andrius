@@ -14,7 +14,7 @@ public class LoginPage {
     }
 
     public static void inputEmail(String email) {
-        Common.waitForElementToBeVisible(1, Locator.Ryanair.LoginPage.waitForInfoBox);
+        Common.waitForElementToBeVisible(1, Locator.Ryanair.LoginPage.inputEmailBox);
         Common.addText(Locator.Ryanair.LoginPage.inputEmail, email);
     }
 
@@ -23,17 +23,17 @@ public class LoginPage {
     }
 
     public static void clickToLogin() {
-        Common.waitForElementToBeVisible(2, Locator.Ryanair.LoginPage.waitButtonLogin);
+        Common.waitForElementToBeVisible(2, Locator.Ryanair.LoginPage.buttonWaitLogin);
         Common.clickOnElement(Locator.Ryanair.LoginPage.buttonClickLogin);
     }
 
     public static String readProfileEmail() {
-        Common.waitForElementToBeVisible(1, Locator.Ryanair.LoginPage.waitForEmailBox);
+        Common.waitForElementToBeVisible(1, Locator.Ryanair.LoginPage.spanEmailBox);
         return Common.getText(Locator.Ryanair.LoginPage.spanEmail);
     }
 
     public static void clickOnCookies() {
-        Common.waitForElementToBeVisible(1, Locator.Ryanair.LoginPage.waitForElement);
-        Common.clickOnElement(Locator.Ryanair.LoginPage.clickOnNoThanks);
+        Common.waitForElementToBeVisible(1, Locator.Ryanair.LoginPage.buttonWaitCookieNoThanks);
+        Common.clickOnElement(Locator.Ryanair.LoginPage.buttonNoThanks);
     }
 }

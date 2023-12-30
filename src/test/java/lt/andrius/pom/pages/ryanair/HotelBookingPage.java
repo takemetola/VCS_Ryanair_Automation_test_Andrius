@@ -10,21 +10,21 @@ public class HotelBookingPage {
     }
 
     public static void clickOnButtonHotels() {
-        Common.clickOnElement(Locator.Ryanair.HotelBookingPage.buttonClickHotels);
+        Common.clickOnElement(Locator.Ryanair.HotelBookingPage.buttonHotels);
     }
 
     public static void addTextToFindHotel(String destinationHotel) {
-        Common.addText(Locator.Ryanair.HotelBookingPage.addTexToBox, destinationHotel);
+        Common.addText(Locator.Ryanair.HotelBookingPage.inputTxtBox, destinationHotel);
     }
 
     public static void clickOnElementBerlin() {
-        Common.waitForElementToBeVisible(1, Locator.Ryanair.HotelBookingPage.waitForDropMenu);
+        Common.waitForElementToBeVisible(1, Locator.Ryanair.HotelBookingPage.divLocation);
         Common.clickOnElement(Locator.Ryanair.HotelBookingPage.divTextBerlin);
     }
 
     public static void clickOnChooseCheckInDate() {
-        Common.waitForElementToBeVisible(1, Locator.Ryanair.HotelBookingPage.waitForElementCalendar);
-        Common.clickOnElement(Locator.Ryanair.HotelBookingPage.clickOnInputDate);
+        Common.waitForElementToBeVisible(1, Locator.Ryanair.HotelBookingPage.inputCalendar);
+        Common.clickOnElement(Locator.Ryanair.HotelBookingPage.inputDate);
     }
 
     public static void clickOnStartDate() {
@@ -40,10 +40,10 @@ public class HotelBookingPage {
     }
 
     public static String readTitle() {
-       return Common.getText(Locator.Ryanair.HotelBookingPage.getTitle);
+       return Common.getText(Locator.Ryanair.HotelBookingPage.headerTitle);
     }
 
     public static void clickOnCookies() {
-        Common.clickOnElement(Locator.Ryanair.HotelBookingPage.clickReject);
+        Common.clickOnElement(Locator.Ryanair.HotelBookingPage.buttonRejectCookies);
     }
 }
