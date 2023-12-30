@@ -15,6 +15,7 @@ public class Driver {
 
         ChromeOptions option = new ChromeOptions();
 
+        //Does not run headless. Site checks for real human input.
         //option.addArguments("--headless=new");
         option.addArguments("--start-maximized");
 
