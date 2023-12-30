@@ -44,31 +44,31 @@ public class Locator {
         }
 
         public class FlightSearchPage {
-            public static By clickOnOneWayRadioButton =
+            public static By radioButtonOneWay =
                     By.xpath("//ry-radio-button[@data-ref='flight-search-trip-type__one-way-trip']");
-            public static By clickonTextBox =
+            public static By inputDeparture =
                     By.xpath("//input[@id='input-button__departure' " +
                             "and @data-ref='input-button__display-value']");
-            public static By clickOnElementVNO = By.xpath("//span[@data-ref='airport-item__name' " +
+            public static By spanElementVNO = By.xpath("//span[@data-ref='airport-item__name' " +
                     "and @data-id='VNO']");
-            public static By clickOnElementGermany =
+            public static By spanElementGermany =
                     By.xpath("//span[@data-ref='country__name' and normalize-space(.)='Germany']");
-            public static By clickOnElementBerlinBrandenburg =
+            public static By spanEelementBER =
                     By.xpath("//span[@data-ref='airport-item__name' and @data-id='BER']");
-            public static By clickOnDeparturesDateBox = By.xpath("//div[@data-id='2024-01-31']");
-            public static By clickOnDone =
+            public static By divDepartDate = By.xpath("//div[@data-id='2024-01-31']");
+            public static By buttonDone =
                     By.xpath("//button[@class='passengers__confirm-button " +
                             "ry-button--anchor-blue ry-button--anchor']");
-            public static By clickOnBox = By.xpath("//button[@aria-label='Search']");
-            public static By getTextFlighNumber =
+            public static By buttonSearch = By.xpath("//button[@aria-label='Search']");
+            public static By divFlightNum =
                     By.xpath("//div[@class='card-flight-num__content' and @data-ref='FR 6637']");
-            public static By clickReject = By.xpath("//button[@data-ref='cookie.no-thanks']");
-            public static By waitForElement = By.xpath("//span[@data-ref='airport-item__name' " +
+            public static By buttonRejectCookies = By.xpath("//button[@data-ref='cookie.no-thanks']");
+            public static By spanElementAirport = By.xpath("//span[@data-ref='airport-item__name' " +
                     "and @data-id='VNO']");
-            public static By waitForElementGermany =
+            public static By spanElementCountry =
                     By.xpath("//span[@data-ref='country__name' and normalize-space(.)='Germany']");
-            public static By waitForDepartBox = By.xpath("//div[@data-id='2024-01-31']");
-            public static By waitForFlightNumber =
+            public static By divDepartBox = By.xpath("//div[@data-id='2024-01-31']");
+            public static By divFlightNumber =
                     By.xpath("//div[@class='card-flight-num__content' and @data-ref='FR 6637']");
         }
 
