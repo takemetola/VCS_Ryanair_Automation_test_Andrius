@@ -54,4 +54,12 @@ public class FlightSearchPage {
     public static void clickOnCookies() {
         Common.clickOnElement(Locator.Ryanair.FlightSearchPage.buttonRejectCookies);
     }
+
+    public static void calendarArrowClickForward() throws InterruptedException {
+        Common.waitForElementToBeVisible(5, Locator.Ryanair.FlightSearchPage.calendarArrowForwardButton);
+        Common.clickOnElement(Locator.Ryanair.FlightSearchPage.calendarArrowForwardButton);
+        Thread.sleep(1000);
+        Common.clickOnElement(Locator.Ryanair.FlightSearchPage.calendarArrowForwardButton);
+
+    }
 }

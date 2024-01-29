@@ -70,6 +70,7 @@ public class Locator {
             public static By divDepartBox = By.xpath("//div[@data-id='2024-01-31']");
             public static By divFlightNumber =
                     By.xpath("//div[@class='card-flight-num__content' and @data-ref='FR 6637']");
+            public static By calendarArrowForwardButton = By.xpath("//div[@class='datepicker__arrow-wrap']");
         }
 
         public class HotelBookingPage {
@@ -86,8 +87,8 @@ public class Locator {
                             "and @class='rooms-widget-controls__control rooms-widget-controls__control--date " +
                             "input-button--connected-right']");
             public static By divCalendarClickStart =
-                    By.xpath("(//div[@data-id='2024-01-27'])[2]");
-            public static By divCalendarClickEnd = By.xpath("(//div[@data-id='2024-01-28'])[2]");
+                    By.xpath("//div[@class='calendar-body__cell' and @data-id='2024-05-30']");
+            public static By divCalendarClickEnd = By.xpath("(//div[@class='calendar-body__cell' and @data-id='2024-05-31'])[2]");
             public static By buttonclickSearch = By.xpath("//button[@ry-button " +
                     "and @data-ref='rooms-search-widget__cta' " +
                     "and @class='rooms-search-widget__start-search ry-button--gradient-yellow']");
@@ -100,6 +101,7 @@ public class Locator {
                     By.xpath("(//hp-room-search-location-item[div[@data-ref='location-item__name' " +
                             "and @class='location__name b2' and .='Berlin']])[2]");
             public static By buttonRejectCookies = By.xpath("//button[@data-ref='cookie.no-thanks']");
+            public static By calendarForwardArrowButton = By.xpath("//*[@id='ry-tooltip-12']//div[2]/hp-lazy-room-search-controls-tooltips/hp-app-room-search-controls-tooltips/hp-room-search-controls-tooltips-container/hp-room-search-controls-tooltips/hp-room-search-datepicker-container/fsw-datepicker/ry-datepicker-desktop/div/div[2]");
         }
 
         public class ChatBotPage {

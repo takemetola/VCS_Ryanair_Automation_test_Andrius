@@ -27,7 +27,7 @@ public class Driver {
     }
 
     public static void quitDriver() {
-        driver.get().quit();
-        driver.remove();
+        //driver.get().quit();
+        //driver.remove();
     }
 }

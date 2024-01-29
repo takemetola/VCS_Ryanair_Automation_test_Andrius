@@ -10,6 +10,7 @@ public class LoginPage {
     }
 
     public static void clickOnLoginButton() {
+        Common.waitForElementToBeVisible(2, Locator.Ryanair.LoginPage.clickOnButton);
         Common.clickOnElement(Locator.Ryanair.LoginPage.clickOnButton);
     }
 

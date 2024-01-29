@@ -35,7 +35,7 @@ public class ChatBotPage {
     }
 
     public static String readChatBox() {
-        Common.waitForElementToBeVisible(2, Locator.Ryanair.ChatBotPage.divParagraph);
+        Common.waitForElementToBeVisible(5, Locator.Ryanair.ChatBotPage.divParagraph);
         return Common.getText(Locator.Ryanair.ChatBotPage.divChatBoxText);
     }
 

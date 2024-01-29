@@ -18,16 +18,17 @@ public class HotelBookingTest extends TestBase {
     @DataProvider(name = "testHotelBooking")
     public static Object[][] provideDataForTestHotelBooking() {
         return new Object[][]{
-                {"Berlin", "Properties in Berlin (and vicinity), Germany. January 27, 2024 through January 28, 2024"}
+                {"Berlin", "Properties in Berlin (and vicinity), Germany. May 30, 2024 through May 31, 2024"}
         };
     }
 
     @Test(dataProvider = "testHotelBooking")
-    public void testHotelBooking(String destinationHotel, String expectedResult) {
+    public void testHotelBooking(String destinationHotel, String expectedResult) throws InterruptedException{
         String actualResult;
 
         HotelBookingPage.clickOnButtonHotels();
         HotelBookingPage.clickOnChooseCheckInDate();
+        HotelBookingPage.clickCallendarArrowForward();
         HotelBookingPage.clickOnStartDate();
         HotelBookingPage.clickOnEndDate();
         HotelBookingPage.addTextToFindHotel(destinationHotel);

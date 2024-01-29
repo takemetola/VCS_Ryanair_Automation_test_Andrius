@@ -46,4 +46,12 @@ public class HotelBookingPage {
     public static void clickOnCookies() {
         Common.clickOnElement(Locator.Ryanair.HotelBookingPage.buttonRejectCookies);
     }
+
+    public static void clickCallendarArrowForward() throws InterruptedException {
+        Common.waitForElementToBeVisible(5, Locator.Ryanair.HotelBookingPage.calendarForwardArrowButton);
+        Common.clickOnElement(Locator.Ryanair.HotelBookingPage.calendarForwardArrowButton);
+        Thread.sleep(2);
+        Common.clickOnElement(Locator.Ryanair.HotelBookingPage.calendarForwardArrowButton);
+        Common.clickOnElement(Locator.Ryanair.HotelBookingPage.calendarForwardArrowButton);
+    }
 }

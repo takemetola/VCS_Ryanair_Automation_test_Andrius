@@ -17,7 +17,7 @@ public class FlightSearchTest extends TestBase {
     }
 
     @Test
-    public void testFlightSelect() {
+    public void testFlightSelect() throws InterruptedException {
 
         String expectedResult = "FR 6637";
         String actualResult;
@@ -27,6 +27,7 @@ public class FlightSearchTest extends TestBase {
         FlightSearchPage.inputDeparture();
         FlightSearchPage.inputDestination();
         FlightSearchPage.inputDestinationAirport();
+        //FlightSearchPage.calendarArrowClickForward();
         FlightSearchPage.clickOnDepartDateBox();
         FlightSearchPage.clickOnButtonDone();
         FlightSearchPage.clickOnSearchBox();
