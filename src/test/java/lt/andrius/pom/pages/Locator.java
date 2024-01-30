@@ -66,9 +66,6 @@ public class Locator {
                     "and @data-id='VNO']");
             public static By spanElementCountry =
                     By.xpath("//span[@data-ref='country__name' and normalize-space(.)='Germany']");
-            public static By divDepartBox = By.xpath("//div[contains(@class, 'calendar-body__cell--weekend') and @data-id='2024-06-08' and @data-type='day']");
-            public static By divFlightNumber =
-                    By.xpath("//div[@class='card-flight-num__content' and @data-ref='FR 6637']");
             public static By calendarArrowForwardButton = By.xpath("//div[@class='datepicker__arrow-wrap']");
             public static By calendarArrowForwardButtonNext = By.xpath("(//div[@class='datepicker__arrow-wrap'][2])");
         }
