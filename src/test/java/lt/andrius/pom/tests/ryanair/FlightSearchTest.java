@@ -28,7 +28,6 @@ public class FlightSearchTest extends TestBase {
         FlightSearchPage.clickOnFromTextBox();
         FlightSearchPage.inputDeparture(departureCity);
         FlightSearchPage.inputDestination(destinationCity);
-        //FlightSearchPage.inputDestinationAirport();
         FlightSearchPage.calendarArrowClickForward();
         FlightSearchPage.clickOnDepartDateBox();
         FlightSearchPage.clickOnButtonDone();
