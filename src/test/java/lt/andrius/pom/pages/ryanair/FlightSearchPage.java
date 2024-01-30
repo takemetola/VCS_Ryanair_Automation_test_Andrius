@@ -17,14 +17,18 @@ public class FlightSearchPage {
         Common.clickOnElement(Locator.Ryanair.FlightSearchPage.inputDeparture);
     }
 
-    public static void inputDeparture() {
+    public static void inputDeparture(String departureCity) {
         Common.waitForElementToBeVisible(1, Locator.Ryanair.FlightSearchPage.spanElementAirport);
         Common.clickOnElement(Locator.Ryanair.FlightSearchPage.spanElementVNO);
+        Common.addText(Locator.Ryanair.FlightSearchPage.spanElementVNO, departureCity);
     }
 
-    public static void inputDestination() {
+    public static void inputDestination(String destinationCity) throws InterruptedException {
         Common.waitForElementToBeVisible(1, Locator.Ryanair.FlightSearchPage.spanElementCountry);
         Common.clickOnElement(Locator.Ryanair.FlightSearchPage.spanElementGermany);
+        Common.addText(Locator.Ryanair.FlightSearchPage.spanElementGermany, destinationCity);
+        Thread.sleep(1000);
+        Common.pressEnterKey();
     }
 
     public static void inputDestinationAirport() {
@@ -32,7 +36,7 @@ public class FlightSearchPage {
     }
 
     public static void clickOnDepartDateBox() {
-        Common.waitForElementToBeVisible(1, Locator.Ryanair.FlightSearchPage.divDepartBox);
+        Common.waitForElementToBeVisible(1, Locator.Ryanair.FlightSearchPage.divDepartDate);
         Common.scrollWindowByActionsPlus300Y();
         Common.clickOnElement(Locator.Ryanair.FlightSearchPage.divDepartDate);
     }
@@ -47,7 +51,7 @@ public class FlightSearchPage {
     }
 
     public static String readFlightNumber() {
-        Common.waitForElementToBeVisible(2, Locator.Ryanair.FlightSearchPage.divFlightNumber);
+        Common.waitForElementToBeVisible(Locator.Ryanair.FlightSearchPage.divFlightNum);
         return Common.getText(Locator.Ryanair.FlightSearchPage.divFlightNum);
     }
 
@@ -59,7 +63,11 @@ public class FlightSearchPage {
         Common.waitForElementToBeVisible(5, Locator.Ryanair.FlightSearchPage.calendarArrowForwardButton);
         Common.clickOnElement(Locator.Ryanair.FlightSearchPage.calendarArrowForwardButton);
         Thread.sleep(1000);
-        Common.clickOnElement(Locator.Ryanair.FlightSearchPage.calendarArrowForwardButton);
+        Common.clickOnElement(Locator.Ryanair.FlightSearchPage.calendarArrowForwardButtonNext);
+        Thread.sleep(1000);
+        Common.clickOnElement(Locator.Ryanair.FlightSearchPage.calendarArrowForwardButtonNext);
+        Thread.sleep(1000);
+        Common.clickOnElement(Locator.Ryanair.FlightSearchPage.calendarArrowForwardButtonNext);
 
     }
 }

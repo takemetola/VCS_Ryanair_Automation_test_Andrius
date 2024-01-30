@@ -49,28 +49,28 @@ public class Locator {
             public static By inputDeparture =
                     By.xpath("//input[@id='input-button__departure' " +
                             "and @data-ref='input-button__display-value']");
-            public static By spanElementVNO = By.xpath("//span[@data-ref='airport-item__name' " +
-                    "and @data-id='VNO']");
+            public static By spanElementVNO = By.xpath("//*[@id='input-button__departure']");
             public static By spanElementGermany =
-                    By.xpath("//span[@data-ref='country__name' and normalize-space(.)='Germany']");
+                    By.xpath("//*[@id='input-button__destination']");
             public static By spanEelementBER =
                     By.xpath("//span[@data-ref='airport-item__name' and @data-id='BER']");
-            public static By divDepartDate = By.xpath("//div[@data-id='2024-01-31']");
+            public static By divDepartDate = By.xpath("//div[@data-id='2024-06-08']");
             public static By buttonDone =
                     By.xpath("//button[@class='passengers__confirm-button " +
                             "ry-button--anchor-blue ry-button--anchor']");
             public static By buttonSearch = By.xpath("//button[@aria-label='Search']");
             public static By divFlightNum =
-                    By.xpath("//div[@class='card-flight-num__content' and @data-ref='FR 6637']");
+                    By.xpath("//div[@class='card-flight-num__content' and text()=' FR 1571 ']");
             public static By buttonRejectCookies = By.xpath("//button[@data-ref='cookie.no-thanks']");
             public static By spanElementAirport = By.xpath("//span[@data-ref='airport-item__name' " +
                     "and @data-id='VNO']");
             public static By spanElementCountry =
                     By.xpath("//span[@data-ref='country__name' and normalize-space(.)='Germany']");
-            public static By divDepartBox = By.xpath("//div[@data-id='2024-01-31']");
+            public static By divDepartBox = By.xpath("//div[contains(@class, 'calendar-body__cell--weekend') and @data-id='2024-06-08' and @data-type='day']");
             public static By divFlightNumber =
                     By.xpath("//div[@class='card-flight-num__content' and @data-ref='FR 6637']");
             public static By calendarArrowForwardButton = By.xpath("//div[@class='datepicker__arrow-wrap']");
+            public static By calendarArrowForwardButtonNext = By.xpath("(//div[@class='datepicker__arrow-wrap'][2])");
         }
 
         public class HotelBookingPage {

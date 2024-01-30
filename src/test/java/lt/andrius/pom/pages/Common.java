@@ -2,6 +2,7 @@ package lt.andrius.pom.pages;
 
 import lt.andrius.pom.utils.Driver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -73,4 +74,15 @@ public class Common {
         Driver.getDriver().switchTo().frame(getElement(locator));
     }
 
+    public static void pressEnterKey() {
+        Actions actions = new Actions(Driver.getDriver());
+        actions
+                .sendKeys(Keys.ENTER)
+                .perform();
+    }
+
+    public static void waitForElementToBeVisible(By locator) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
 }
