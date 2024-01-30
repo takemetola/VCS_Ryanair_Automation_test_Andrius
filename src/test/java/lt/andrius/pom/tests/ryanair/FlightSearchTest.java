@@ -4,6 +4,7 @@ import lt.andrius.pom.pages.ryanair.FlightSearchPage;
 import lt.andrius.pom.tests.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class FlightSearchTest extends TestBase {
@@ -16,12 +17,16 @@ public class FlightSearchTest extends TestBase {
         FlightSearchPage.clickOnCookies();
     }
 
-    @Test
-    public void testFlightSelect() throws InterruptedException {
+    @DataProvider(name = "testFlightSelect")
+    public static Object[][] provideDataForTestFlightSelect() {
+        return new Object[][]{
+                {"Vilnius", "Berlin Brandenburg", "FR 1571"}
+        };
+    }
 
-        String expectedResult = "FR 1571";
-        String departureCity = "Vilnius";
-        String destinationCity = "Berlin Brandenburg";
+    @Test(dataProvider = "testFlightSelect")
+    public void testFlightSelect(String departureCity, String destinationCity, String expectedResult) throws InterruptedException {
+
         String actualResult;
 
         FlightSearchPage.clickOneWay();
