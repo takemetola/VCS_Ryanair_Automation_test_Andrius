@@ -19,15 +19,17 @@ public class FlightSearchTest extends TestBase {
     @Test
     public void testFlightSelect() throws InterruptedException {
 
-        String expectedResult = "FR 6637";
+        String expectedResult = "FR 1571";
+        String departureCity = "Vilnius";
+        String destinationCity = "Berlin Brandenburg";
         String actualResult;
 
         FlightSearchPage.clickOneWay();
         FlightSearchPage.clickOnFromTextBox();
-        FlightSearchPage.inputDeparture();
-        FlightSearchPage.inputDestination();
-        FlightSearchPage.inputDestinationAirport();
-        //FlightSearchPage.calendarArrowClickForward();
+        FlightSearchPage.inputDeparture(departureCity);
+        FlightSearchPage.inputDestination(destinationCity);
+        //FlightSearchPage.inputDestinationAirport();
+        FlightSearchPage.calendarArrowClickForward();
         FlightSearchPage.clickOnDepartDateBox();
         FlightSearchPage.clickOnButtonDone();
         FlightSearchPage.clickOnSearchBox();
