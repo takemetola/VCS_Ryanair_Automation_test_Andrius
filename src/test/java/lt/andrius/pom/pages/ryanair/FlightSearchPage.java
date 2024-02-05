@@ -19,7 +19,7 @@ public class FlightSearchPage {
 
     public static void inputDeparture(String departureCity) {
         Common.waitForElementToBeVisible(1, Locator.Ryanair.FlightSearchPage.spanElementAirport);
-        Common.clickOnElement(Locator.Ryanair.FlightSearchPage.spanElementVNO);
+        Common.ctrlAAndDelete(Locator.Ryanair.FlightSearchPage.spanElementVNO);
         Common.addText(Locator.Ryanair.FlightSearchPage.spanElementVNO, departureCity);
     }
 
