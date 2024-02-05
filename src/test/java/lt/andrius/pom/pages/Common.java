@@ -85,4 +85,13 @@ public class Common {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
+    public static void ctrlAAndDelete(By locator) {
+        Actions actions = new Actions(Driver.getDriver());
+        WebElement element = getElement(locator);
+        actions.moveToElement(element).keyDown(Keys.COMMAND).sendKeys("a").keyUp(Keys.COMMAND);
+
+        actions.sendKeys(Keys.BACK_SPACE);
+
+        actions.perform();
+    }
 }
