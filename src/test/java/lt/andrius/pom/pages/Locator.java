@@ -111,8 +111,7 @@ public class Locator {
                     By.xpath("//a[@class='button button-outline-primary button-lg' " +
                             "and contains(text(), 'Chat now')]");
             public static By buttonAgree =
-                    By.xpath("//button[@class='cookie-popup-with-overlay__button' " +
-                            "and text()='Yes, I agree']");
+                    By.xpath("//button[@data-ref='cookie.accept-all']");
             public static By buttonAgreeCookies =
                     By.xpath("//button[@class='cookie-popup-with-overlay__button' " +
                             "and text()='Yes, I agree']");
@@ -122,12 +121,10 @@ public class Locator {
                     By.xpath("//div[@class='panelParagraph-3qh9g lineClamp-E9j4z'" +
                             "and text()='How can I help you today?']");
             public static By divChatBoxText =
-                    By.xpath("//div[@class='panelParagraph-3qh9g lineClamp-E9j4z' " +
-                            "and text()='How can I help you today?']");
+                    By.xpath("//div[text()='How can I help you today?']");
             public static By iFrameWidget = By.xpath("//iframe[@id='webWidget']");
             public static By inputTxtNameBox = By.xpath("//input[@id='1val-field_1.3.10--input']");
-            public static By buttonStartChat =
-                    By.xpath("//button[@class='sc-htpNat jzezno' and contains(text(), 'Start chat')]");
+            public static By buttonStartChat = By.xpath("//button[@data-testid='button-ok']");
         }
     }
 }
