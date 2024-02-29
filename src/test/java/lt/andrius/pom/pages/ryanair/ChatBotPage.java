@@ -19,7 +19,7 @@ public class ChatBotPage {
     }
 
     public static void clickOnCookiesAgree() {
-        Common.waitForElementToBeVisible(1, Locator.Ryanair.ChatBotPage.buttonAgreeCookies);
+        Common.waitForElementToBeVisible(1, Locator.Ryanair.ChatBotPage.buttonAgree);
         Common.clickOnElement(Locator.Ryanair.ChatBotPage.buttonAgree);
     }
 
@@ -35,7 +35,7 @@ public class ChatBotPage {
     }
 
     public static String readChatBox() {
-        Common.waitForElementToBeVisible(5, Locator.Ryanair.ChatBotPage.divParagraph);
+        Common.waitForElementToBeVisible(5, Locator.Ryanair.ChatBotPage.divChatBoxText);
         return Common.getText(Locator.Ryanair.ChatBotPage.divChatBoxText);
     }
 
