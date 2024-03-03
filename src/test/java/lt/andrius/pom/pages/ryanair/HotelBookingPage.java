@@ -15,11 +15,7 @@ public class HotelBookingPage {
 
     public static void addTextToFindHotel(String destinationHotel) {
         Common.addText(Locator.Ryanair.HotelBookingPage.inputTxtBox, destinationHotel);
-    }
-
-    public static void clickOnElementBerlin() {
-        Common.waitForElementToBeVisible(1, Locator.Ryanair.HotelBookingPage.divLocation);
-        Common.clickOnElement(Locator.Ryanair.HotelBookingPage.divTextBerlin);
+        Common.clickOnElement(Locator.Ryanair.HotelBookingPage.elementBerlin);
     }
 
     public static void clickOnChooseCheckInDate() {
@@ -32,6 +28,7 @@ public class HotelBookingPage {
     }
 
     public static void clickOnEndDate() {
+        Common.waitForElementToBeVisible(Locator.Ryanair.HotelBookingPage.divCalendarClickEnd);
         Common.clickOnElement(Locator.Ryanair.HotelBookingPage.divCalendarClickEnd);
     }
 
@@ -40,7 +37,7 @@ public class HotelBookingPage {
     }
 
     public static String readTitle() {
-       return Common.getText(Locator.Ryanair.HotelBookingPage.headerTitle);
+        return Common.getText(Locator.Ryanair.HotelBookingPage.headerTitle);
     }
 
     public static void clickOnCookies() {

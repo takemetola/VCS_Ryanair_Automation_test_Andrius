@@ -56,6 +56,8 @@ public class FlightSearchPage {
     }
 
     public static void clickOnCookies() {
+
+        Common.waitForElementToBeVisible(2,Locator.Ryanair.FlightSearchPage.buttonRejectCookies);
         Common.clickOnElement(Locator.Ryanair.FlightSearchPage.buttonRejectCookies);
     }
 

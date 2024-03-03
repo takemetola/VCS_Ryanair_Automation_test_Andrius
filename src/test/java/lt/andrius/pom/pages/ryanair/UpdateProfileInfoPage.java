@@ -10,6 +10,7 @@ public class UpdateProfileInfoPage {
     }
 
     public static void clickOnCookies() {
+        Common.waitForElementToBeVisible(1, Locator.Ryanair.UpdateProfileInfoPage.buttonCookiesNo);
         Common.clickOnElement(Locator.Ryanair.UpdateProfileInfoPage.buttonCookiesNo);
     }
 
