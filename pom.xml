@@ -34,8 +34,8 @@
 
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-http-jdk-client</artifactId>
-            <version>4.8.2</version>
+            <artifactId>selenium-java</artifactId>
+            <version>4.18.1</version>
         </dependency>
     </dependencies>
 
