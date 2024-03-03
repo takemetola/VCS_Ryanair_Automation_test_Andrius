@@ -54,14 +54,14 @@ public class Locator {
                     By.xpath("//*[@id='input-button__destination']");
             public static By spanEelementBER =
                     By.xpath("//span[@data-ref='airport-item__name' and @data-id='BER']");
-            public static By divDepartDate = By.xpath("//div[@data-id='2024-06-08']");
+            public static By divDepartDate = By.xpath("//div[@data-id='2024-07-13']");
             public static By buttonDone =
                     By.xpath("//button[@class='passengers__confirm-button " +
                             "ry-button--anchor-blue ry-button--anchor']");
             public static By buttonSearch = By.xpath("//button[@aria-label='Search']");
             public static By divFlightNum =
                     By.xpath("//div[@class='card-flight-num__content' and text()=' FR 1571 ']");
-            public static By buttonRejectCookies = By.xpath("//button[@data-ref='cookie.no-thanks']");
+            public static By buttonRejectCookies = By.xpath("//button[@data-ref='cookie.accept-all' and text()='Yes, I agree']");
             public static By spanElementAirport = By.xpath("//span[@data-ref='airport-item__name' " +
                     "and @data-id='VNO']");
             public static By spanElementCountry =
@@ -76,16 +76,14 @@ public class Locator {
                     By.xpath("//button[@data-ref='search-widget-tabs__rooms']");
             public static By inputTxtBox =
                     By.xpath("//input[@class='input-button__input ng-star-inserted']");
-            public static By divTextBerlin =
-                    By.xpath("(//hp-room-search-location-item[div[@data-ref='location-item__name' " +
-                            "and @class='location__name b2' and .='Berlin']])[2]");
+
             public static By inputDate =
                     By.xpath("//hp-input-button[@uniqueid='check-in' " +
                             "and @class='rooms-widget-controls__control rooms-widget-controls__control--date " +
                             "input-button--connected-right']");
             public static By divCalendarClickStart =
-                    By.xpath("//div[@class='calendar-body__cell' and @data-id='2024-05-30']");
-            public static By divCalendarClickEnd = By.xpath("(//div[@class='calendar-body__cell' and @data-id='2024-05-31'])[2]");
+                    By.xpath("//div[@class='calendar-body__cell calendar-body__cell--weekend' and @data-id='2024-07-27']");
+            public static By divCalendarClickEnd = By.xpath("(//div[@data-id='2024-08-24' and @data-type='day'])[2]");
             public static By buttonclickSearch = By.xpath("//button[@ry-button " +
                     "and @data-ref='rooms-search-widget__cta' " +
                     "and @class='rooms-search-widget__start-search ry-button--gradient-yellow']");
@@ -94,11 +92,10 @@ public class Locator {
             public static By inputCalendar = By.xpath("//hp-input-button[@uniqueid='check-in' " +
                     "and @class='rooms-widget-controls__control rooms-widget-controls__control--date " +
                     "input-button--connected-right']");
-            public static By divLocation =
-                    By.xpath("(//hp-room-search-location-item[div[@data-ref='location-item__name' " +
-                            "and @class='location__name b2' and .='Berlin']])[2]");
+
             public static By buttonRejectCookies = By.xpath("//button[@data-ref='cookie.no-thanks']");
             public static By calendarForwardArrowButton = By.xpath("//*[@id='ry-tooltip-12']//div[2]/hp-lazy-room-search-controls-tooltips/hp-app-room-search-controls-tooltips/hp-room-search-controls-tooltips-container/hp-room-search-controls-tooltips/hp-room-search-datepicker-container/fsw-datepicker/ry-datepicker-desktop/div/div[2]");
+            public static By elementBerlin = By.xpath("(//div[text()='Berlin'])[2]");
         }
 
         public class ChatBotPage {
