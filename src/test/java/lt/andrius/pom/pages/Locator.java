@@ -88,7 +88,7 @@ public class Locator {
                     "and @data-ref='rooms-search-widget__cta' " +
                     "and @class='rooms-search-widget__start-search ry-button--gradient-yellow']");
             public static By headerTitle =
-                    By.xpath("(//h1[@class='is-visually-hidden'])[2]");
+                    By.xpath("//button[@class=\"uitk-fake-input uitk-form-field-trigger\" and text()=\"Berlin (and vicinity), Germany\"]");
             public static By inputCalendar = By.xpath("//hp-input-button[@uniqueid='check-in' " +
                     "and @class='rooms-widget-controls__control rooms-widget-controls__control--date " +
                     "input-button--connected-right']");

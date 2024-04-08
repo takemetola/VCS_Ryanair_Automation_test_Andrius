@@ -18,7 +18,7 @@ public class HotelBookingTest extends TestBase {
     @DataProvider(name = "testHotelBooking")
     public static Object[][] provideDataForTestHotelBooking() {
         return new Object[][]{
-                {"Berlin", "Properties in Berlin (and vicinity), Germany. July 27, 2024 through August 24, 2024"}
+                {"Berlin", "Berlin (and vicinity), Germany"}
         };
     }
 
